@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using dotnet.Models;
-
+using UsuarioEx.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkNpgsql()
-    .AddDbContext<Context>(options =>
-    options.UseNpgsql("Host=localhost;Port=5432;Pooling=true;Database=levi_linux;User Id=levi_linux;Password=12345"));
+    .AddDbContext<MyDbContext>(options =>
+    options.UseNpgsql("Host=localhost;Port=5432;Pooling=true;Database=quero_dormir;User Id=levi_linux;Password=12345"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

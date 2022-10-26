@@ -1,4 +1,4 @@
-namespace Usuario.Models;
+namespace UsuarioEx.Models;
 
 public class ErrorViewModel
 {

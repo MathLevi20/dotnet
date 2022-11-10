@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkNpgsql()
     .AddDbContext<MyDbContext>(options =>
-    options.UseNpgsql("Host=localhost;Port=5432;Pooling=true;Database=quero_dormir;User Id=levi_linux;Password=12345"));
+    options.UseNpgsql("Host=localhost;Port=5432;Pooling=true;Database=db;User Id=dotnet_db;Password=12345"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
